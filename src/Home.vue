@@ -6,7 +6,9 @@
       {{announcement}}
     </section>
     <section>
-      <book-list :books="latestUpdated" heading="最近更新">
+      <book-list :books="latestUpdated" heading="最近更新"
+        @onBookSelect="onBookSelect($event)"
+      >
         </book-list>
       </book-list>
     </section>
@@ -39,6 +41,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    onBookSelect(book){
+      console.dir(book);
+    }
   },
   components: {BookList},
 };
