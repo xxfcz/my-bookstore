@@ -1,6 +1,6 @@
-# vue-demo
+# my-booksotre
 
-> A Vue.js demo project
+> 《Vue2实践揭秘》示例项目，代码是我手工打的。
 
 ## Build Setup
 
