@@ -11,7 +11,7 @@ import BookDetails from '@/BookDetails'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  //mode: 'history',
   base: __dirname,
   linkActiveClass: "active",
   routes: [

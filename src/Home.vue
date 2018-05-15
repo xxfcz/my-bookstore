@@ -19,27 +19,16 @@
 </template>
 
 <script>
+import axios from "axios"
 import BookList from "./components/BookList.vue"
 
 export default {
   data() {
     return {
-      announcement: "今日上架的图书全部8折",
-      slides: [{ id: 1 }, { id: 2 }],
-      latestUpdated: [
-        {
-          id: 1,
-          title: "揭开数据真相: 从小臼到数据分析达人",
-          authors: ["E Z", "D Z"],
-          img_url: "/static/img/cover/1.svg"
-        },
-        {
-          id: 2,
-          title: "Android 高级进阶",
-          authors: ["顾浩鑫"],
-          img_url: "/static/img/cover/2.svg"
-        }
-      ]
+      announcement: "",
+      slides: [],
+      latestUpdated: [],
+      recommended: []
     };
   },
   methods: {
@@ -48,5 +37,15 @@ export default {
     }
   },
   components: {BookList},
+  created(){
+    axios.get('/api/home').then(res => {
+      this.announcement = res.data.announcement;
+      this.slides = res.data.slides;
+      this.latestUpdated = res.data.latestUpdated;
+      this.recommended = res.data.recommended;
+    }, err=>{
+      console.log(err);
+    });
+  }
 };
 </script>
