@@ -15,12 +15,17 @@
     <section>
       <!-- 编辑推荐 -->
     </section>
+    <modal-dialog ref="dialog">
+      <div slot="header">此处是 header 插棤的内容</div>
+      <div>这个DIV将自动默认插槽的内容</div>
+    </modal-dialog>
   </div>
 </template>
 
 <script>
 import axios from "axios"
 import BookList from "./components/BookList.vue"
+import ModalDialog from "./components/Dialog.vue"
 
 export default {
   data() {
@@ -34,9 +39,10 @@ export default {
   methods: {
     onBookSelect(book){
       console.dir(book);
+      this.$refs.dialog.open()
     }
   },
-  components: {BookList},
+  components: {BookList, ModalDialog},
   created(){
     axios.get('/api/home').then(res => {
       this.announcement = res.data.announcement;
