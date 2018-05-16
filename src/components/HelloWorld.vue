@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <simple-component></simple-component>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -84,13 +85,15 @@
 </template>
 
 <script>
+import SimpleComponent from '@/components/SimpleComponent'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  components: {SimpleComponent}
 }
 </script>
 
