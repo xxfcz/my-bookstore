@@ -68,6 +68,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true
     }),
+    new HtmlWebpackPlugin({
+      filename: 'offline.appcache',
+      template: 'offline.appcache',
+      inject: true
+    }),
     // copy custom static assets
     new CopyWebpackPlugin([
       {

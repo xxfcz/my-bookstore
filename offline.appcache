@@ -1,0 +1,15 @@
+CACHE MANIFEST
+
+CACHE:
+# Defines resources to be cached.
+app.js
+
+FALLBACK:
+# Defines resources to be used if non-cached
+# resources cannot be downloaded, for example
+# when the browser is offline..
+/ /
+
+NETWORK:
+# Defines resources that will not be cached.
+*
