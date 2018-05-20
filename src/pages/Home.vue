@@ -7,9 +7,7 @@
     </section>
     <section>
       <book-list :books="latestUpdated" heading="最近更新"
-        @onBookSelect="onBookSelect($event)"
-      >
-        </book-list>
+        @onBookSelect="onBookSelect($event)">
       </book-list>
     </section>
     <section>
