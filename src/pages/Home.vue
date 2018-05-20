@@ -24,8 +24,8 @@
 
 <script>
 import axios from "axios"
-import BookList from "./components/BookList.vue"
-import ModalDialog from "./components/Dialog.vue"
+import BookList from "@/components/BookList.vue"
+import ModalDialog from "@/components/Dialog.vue"
 
 export default {
   data() {
